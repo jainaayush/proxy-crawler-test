@@ -18,8 +18,8 @@ RSpec.describe "Crawls", type: :request do
 
   describe "GET /scrap" do
     it "returns http success" do
-      get "/crawl/scrap"
-      expect(response).to have_http_status(:success)
+      post "/crawl/scrap"
+      expect(response).to have_http_status 302
     end
   end
 
